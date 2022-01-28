@@ -1,12 +1,14 @@
 name: Build-OpenWrt
 on:
-  push:
-    branches:
-      - master
+#  push:
+#    branches:
+#      - master
+  watch:
+    types: [started]
 
 jobs:
   rm2100:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
     - name: Prepare environment
       run: |
