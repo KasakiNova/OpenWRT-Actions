@@ -31,7 +31,6 @@ jobs:
           curl -L https://raw.githubusercontent.com/retayihtevr/OpenWRT-Actions/main/script.sh | bash
           curl -L https://raw.githubusercontent.com/retayihtevr/OpenWRT-Actions/main/x86/config >> .config
           make defconfig
-    - name: Deploy Applications
     - name: Download libraries and dependencies
       run: |
           pwd
