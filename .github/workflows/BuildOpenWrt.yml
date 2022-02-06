@@ -7,7 +7,7 @@ on:
     types: [started]
 
 jobs:
-  CompileOpenWRT:
+  x86:
     runs-on: ubuntu-20.04
     steps:
     - name: Install compile environment
