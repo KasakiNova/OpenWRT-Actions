@@ -23,9 +23,11 @@ jobs:
       run: |
           git clone https://github.com/coolsnowwolf/lede
           cd lede
+          curl -L https://raw.githubusercontent.com/retayihtevr/OpenWRT-Actions/main/feeds.conf.default >> feeds.conf.default
           rm -rf package/lean/luci-theme-argon
           ./scripts/feeds update -a
           ./scripts/feeds install -a
+          ./scripts/feeds install -f
           curl -L https://raw.githubusercontent.com/retayihtevr/OpenWRT-Actions/main/x86/config >> .config
           make defconfig
 
